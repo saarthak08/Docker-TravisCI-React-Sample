@@ -2,11 +2,11 @@ FROM node:alpine as builder
 
 WORKDIR "/app"
 
-COPY package.json .
+COPY DockerPractice/frontend/package.json .
 
 RUN npm install
  
-COPY . .
+COPY DockerPractice/frontend/ .
 
 RUN npm run build
 

@@ -2,11 +2,11 @@ FROM node:alpine
 
 WORKDIR '/app'
 
-COPY DockerPractice/frontend/package.json .
+COPY package.json .
 
 RUN npm install
 
-COPY DockerPractice/frontend/ .
+COPY . .
 
 EXPOSE 3000
 

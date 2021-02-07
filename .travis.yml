@@ -3,12 +3,16 @@ sudo: required
 services: 
   - docker
 
+branches:
+  only:
+  - master
+
 
 before_install:
   - docker build -t saarthak08/react-frontend .
 
-script:
-  - docker run -e CI=true saarthak08/react-frontend npm run test -- --coverage
+# script:
+#  - docker run -e CI=true saarthak08/react-frontend npm run test -- --coverage
 
 deploy: 
   provider: elasticbeanstalk

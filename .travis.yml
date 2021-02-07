@@ -11,14 +11,13 @@ script:
 
 deploy: 
   provider: elasticbeanstalk
-  region: "us-east-1"
+  region: "ap-south-1"
   app: "sample-application"
   env: "Sampleapplication-env"
-  bucket_name: "elasticbeanstalk-us-east-1-602282513411"
+  bucket_name: "elasticbeanstalk-ap-south-1-098519501475"
   bucket_path: "sample-application"
   on:
     branch: master
-  session_token: $session_token
   access_key_id: $access_key_id 
   secret_access_key: $secret_access_key
 

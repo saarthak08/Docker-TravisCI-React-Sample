@@ -17,8 +17,8 @@ before_install:
 deploy: 
   provider: elasticbeanstalk
   region: "ap-south-1"
-  app: "sample-application"
-  env: "Sampleapplication-env"
+  app: "sample-react-frontend"
+  env: "Samplereactfrontend-env"
   bucket_name: "elasticbeanstalk-ap-south-1-098519501475"
   bucket_path: "sample-application"
   on:

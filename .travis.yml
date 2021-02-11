@@ -9,10 +9,14 @@ branches:
 
 
 before_install:
+  - docker build -t saarthak08/react-frontend-test -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true saarthak08/react-frontend-test npm run test -- --coverage
+  
+after_success:
   - docker build -t saarthak08/react-frontend .
 
-# script:
-#  - docker run -e CI=true saarthak08/react-frontend npm run test -- --coverage
 
 deploy: 
   provider: elasticbeanstalk
